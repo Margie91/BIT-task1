@@ -54,6 +54,29 @@ footer {
     color: black;
     margin: 0; }
 
+#candidatePage .top-row {
+  margin-top: 0;
+  margin-bottom: 0; }
+  @media screen and (min-width: 992px) {
+    #candidatePage .top-row {
+      margin-top: 4rem; } }
+  @media screen and (min-width: 992px) {
+    #candidatePage .top-row {
+      margin-bottom: 30px; } }
+#candidatePage img {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 5%; }
+#candidatePage p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #949393; }
+  @media screen and (min-width: 992px) {
+    #candidatePage p {
+      margin-top: 0; } }
+#candidatePage h5 {
+  font-size: 1.3rem; }
+
 body {
   font-family: 'Roboto', sans-serif; }
 
