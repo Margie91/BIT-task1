@@ -34,7 +34,16 @@ function getData(param, dataHandler) {
 }
 
 function printCandidates(data) {
-    document.querySelector("#mainContent").innerHTML = "";
+    document.querySelector("#mainContent").innerHTML="";
+    console.log(data);
+
+    if (data.length <= 0) {
+        console.log("ovde smo");
+        var p = document.createElement("p");
+        p.innerHTML="Sorry, no matches"
+        document.querySelector("#mainContent").appendChild(p);
+    }
+
     var container = document.createElement("div");
     container.classList.add("container");
     var row = document.createElement("div");

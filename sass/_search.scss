@@ -9,11 +9,13 @@ input {
     background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png");
     background-size: 30px;
     background-repeat: no-repeat;
+
+    &:focus{
+        outline: none;
+    }
 }
 
-input:focus{
-    outline: none;
-}
+
 
 h2 {
     color: #506C64;
