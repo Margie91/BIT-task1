@@ -3,16 +3,21 @@ nav {
   background-color: #2F2F2F;
   color: white;
   margin-bottom: 50px;
-  box-shadow: 0px 3px 8px gray; }
-  nav span {
+  box-shadow: 0px 2px 7px gray; }
+  nav a {
     color: white;
     border: 1px solid white;
     padding: 10px;
     border-radius: 5px; }
+  nav a:hover {
+    color: orange;
+    border-color: orange;
+    box-shadow: 3px 3px 5px black;
+    text-shadow: 3px 3px 5px black; }
 
 .card {
   margin-top: 30px;
-  box-shadow: 0px 2px 20px #c2c2c2;
+  box-shadow: 0px 2px 15px #c2c2c2;
   text-align: center; }
 
 input {
@@ -33,16 +38,21 @@ h2 {
 
 footer {
   background-color: #DAD7CD;
-  box-shadow: 0 -3px 10px #bebebe;
+  box-shadow: 0 -2px 7px #bebebe;
   text-align: center;
   vertical-align: middle;
   height: 70px;
   margin-top: 30px; }
   footer p {
     line-height: 70px;
-    color: black; }
+    color: black;
+    margin: 0; }
 
 body {
   font-family: 'Roboto', sans-serif; }
+
+#wrapper {
+  min-height: calc(100vh - 100px);
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=style.css.map */
