@@ -1,4 +1,5 @@
 $search-color: rgb(175, 175, 175);
+$search-focus: orange;
 
 input {
     color:  $search-color;
@@ -9,14 +10,28 @@ input {
     background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png");
     background-size: 30px;
     background-repeat: no-repeat;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
 
     &:focus{
         outline: none;
+        transform: scale(1.1);
+        border-bottom: 2px solid $search-focus;
     }
 }
-
-
 
 h2 {
     color: #506C64;
 }
+
+hr {
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:rgb(233, 233, 233);
+    height: 1px;
+  }
+
+.noMatch {
+      font-size: 2.5em;
+  }

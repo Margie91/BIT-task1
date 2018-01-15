@@ -1,26 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 $font-color: white;
+$nav-bg: #104F55;
+$nav-sahdow: rgb(110, 110, 110);
+$a-shadow: black;
+$a-hover: rgb(255, 175, 27);
 
 nav {
-    background-color: #2F2F2F;
+    background-color: $nav-bg;
     color: $font-color;
     margin-bottom: 50px;
-    box-shadow: 0px 2px 7px rgb(128, 128, 128);
+    box-shadow: 0px 2px 7px $nav-sahdow;
+
+    h1 {
+        font-family: 'Raleway', sans-serif;
+        margin: 0;
+        padding: 3px; 
+    }
 
     a {
         color: $font-color;
         border: 1px solid $font-color;
-        padding: 10px;
+        padding: 20px;
         border-radius: 5px;
         transition: all 0.2s ease-in-out;
         box-shadow: none;
         text-shadow: none;
           
         &:hover {
-            color: orange;
-            border-color: orange;
-            box-shadow: 3px 3px 5px black;
-            text-shadow: 3px 3px 5px black;
+            color: $a-hover;
+            border-color: $a-hover;
+            box-shadow: 3px 3px 5px $a-shadow;
+            text-shadow: 3px 3px 5px $a-shadow;
         }
     }
-
 }

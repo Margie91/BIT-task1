@@ -2,21 +2,6 @@
 
 var URLrequest = "http://localhost:3333/api/";
 
-
-
-/*(function () {
-
-     fetch(URLrequest + "candidates")
-        .then(function(response) {
-                return response.json() })
-        .then(function(data) {
-             return candidates = data;
-            })
-        .catch(function(error) {
-            return new Error(error) });
-
-})(); */
-
 var appState = [];
 
 function getData(param, dataHandler) {
@@ -33,14 +18,14 @@ function getData(param, dataHandler) {
         });
 }
 
+
 function printCandidates(data) {
-    document.querySelector("#mainContent").innerHTML="";
-    console.log(data);
+    document.querySelector("#mainContent").innerHTML = "";
 
     if (data.length <= 0) {
-        console.log("ovde smo");
         var p = document.createElement("p");
-        p.innerHTML="Sorry, no matches"
+        p.classList.add("noMatch");
+        p.innerHTML = "Sorry, no matches!"
         document.querySelector("#mainContent").appendChild(p);
     }
 
@@ -71,6 +56,7 @@ function printCandidates(data) {
     addEventListeners();
 }
 
+
 function getCandidates() {
     getData("candidates", function (data) {
         printCandidates(data);
@@ -78,12 +64,12 @@ function getCandidates() {
     });
 }
 
+
 function addEventListeners() {
     var cards = document.querySelectorAll(".card");
     cards.forEach(function (card) {
         card.addEventListener("click", function () {
             var candidateId = this.getAttribute("data-candidateId");
-            console.log(candidateId);
             localStorage.setItem("id", candidateId);
             window.location.href = "candidateInfo.html";
 
@@ -91,13 +77,14 @@ function addEventListeners() {
     })
 }
 
+
 function addSearchEventListener() {
     var search = document.querySelector("#search");
     search.addEventListener("keyup", filterCandidates);
 }
 
+
 function filterCandidates(event) {
-    console.log(event.target.value);
     var searchString = event.target.value;
     var filteredData = appState.filter(function (item) {
         return item.name.toLowerCase().includes(searchString.toLowerCase());

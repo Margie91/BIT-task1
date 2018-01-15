@@ -1,4 +1,4 @@
-#candidatePage {
+.candidatePage {
 
     .top-row {
         margin-top: 0;
@@ -11,15 +11,16 @@
         }
     }
 
-    img {
+    .avatar {
         width: 100%;
         margin-bottom: 30px;
         border-radius: 5%;
+        border: 5px solid rgb(232, 233, 232);
     }
 
     p {
         margin-top: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 7px;
         color: rgb(148, 147, 147);
         @media screen and (min-width: 992px) {
             margin-top: 0;

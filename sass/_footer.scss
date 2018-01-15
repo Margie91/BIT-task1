@@ -1,6 +1,9 @@
+$footer-bg: rgb(211, 216, 212);
+$footer-shadow: rgb(172, 171, 171);
+
 footer {
-    background-color: #DAD7CD;
-    box-shadow: 0 -2px 7px rgb(190, 190, 190);
+    background-color: $footer-bg;
+    box-shadow: 0 -2px 7px $footer-shadow;
     text-align: center;
     vertical-align: middle;
     height: 70px;
