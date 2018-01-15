@@ -36,7 +36,7 @@ function printCandidates(data) {
     data.forEach(function (candidate) {
 
         if (!candidate.avatar) {
-            candidate.avatar = "http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg";
+            candidate.avatar = "assets/person-placeholder.jpg";
         }
 
         var element = document.createElement("div");
