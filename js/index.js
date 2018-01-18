@@ -18,7 +18,7 @@ function getData(param, dataHandler) {
         });
 }
 
-
+//display candidates
 function printCandidates(data) {
     document.querySelector("#mainContent").innerHTML = "";
 
@@ -57,6 +57,7 @@ function printCandidates(data) {
 }
 
 
+//get candidates from server
 function getCandidates() {
     getData("candidates", function (data) {
         printCandidates(data);
@@ -64,7 +65,7 @@ function getCandidates() {
     });
 }
 
-
+//click on candidate card takes us to candidate info page
 function addEventListeners() {
     var cards = document.querySelectorAll(".card");
     cards.forEach(function (card) {
@@ -83,7 +84,7 @@ function addSearchEventListener() {
     search.addEventListener("keyup", filterCandidates);
 }
 
-
+//search candidates
 function filterCandidates(event) {
     var searchString = event.target.value;
     var filteredData = appState.filter(function (item) {

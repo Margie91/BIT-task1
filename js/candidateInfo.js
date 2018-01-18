@@ -4,6 +4,7 @@ var candidateId = parseFloat(localStorage.getItem("id"));
 
 var URLrequest = "http://localhost:3333/api/";
 
+//ajax request
 function getData(param, method, dataHandler) {
     var request = $.ajax({
         url: URLrequest + param,
@@ -16,7 +17,7 @@ function getData(param, method, dataHandler) {
     });
 }
 
-
+// helper function
 function formatDate(d) {
     var date = new Date(d);
     var dd = date.getDate();
@@ -33,12 +34,13 @@ function formatDate(d) {
     return formatedDate;
 }
 
-
+// helper function
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 
+//get specific candidate
 function getCandidateInfo() {
 
     if (!candidateId) {
@@ -59,7 +61,7 @@ function getCandidateInfo() {
     });
 }
 
-
+//get reports from server
 function getReports() {
     getData("reports", "GET", function (data) {
 
@@ -72,7 +74,7 @@ function getReports() {
     });
 }
 
-
+//display candidate info
 function printCandidateInfo(candidate) {
     var avatar = candidate.avatar ? candidate.avatar : "assets/person-placeholder.jpg";
 
@@ -108,6 +110,7 @@ function printCandidateInfo(candidate) {
 }
 
 
+//display candidate reports
 function printCandidateReports(reports) {
 
     var container = $("<div>");
@@ -145,7 +148,7 @@ function printCandidateReports(reports) {
 
 }
 
-
+//dynamically insert information into table
 function generateRows(reports) {
     var output = "";
 
@@ -164,7 +167,7 @@ function generateRows(reports) {
     return output;
 }
 
-
+//on click opens up modal
 function addEventListeners(reports) {
     var seeMore = $("td[data-reportId]");
     seeMore.each(function (index) {
@@ -179,7 +182,7 @@ function addEventListeners(reports) {
     });
 }
 
-
+//display specific report in modal
 function printModalReport(report) {
     $(".modal-title").text("");
     $(".modal-body .row").text("");
