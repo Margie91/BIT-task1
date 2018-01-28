@@ -1,17 +1,19 @@
 "use strict";
 
-var URLrequest = "http://localhost:3333/api/";
+//var URLrequest = "http://localhost:3333/api/";
+
+var URLrequest = "js/db.json";
 
 var appState = [];
 
 function getData(param, dataHandler) {
-    fetch(URLrequest + param)
+    fetch(URLrequest)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            dataHandler(data);
-            appState = data;
+            dataHandler(data[param]);
+            appState = data[param];
         })
         .catch(function (error) {
             console.log(error);

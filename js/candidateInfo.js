@@ -2,18 +2,20 @@
 
 var candidateId = parseFloat(localStorage.getItem("id"));
 
-var URLrequest = "http://localhost:3333/api/";
+//var URLrequest = "http://localhost:3333/api/";
+
+var URLrequest = "js/db.json";
 
 //ajax request
 function getData(param, method, dataHandler) {
     var request = $.ajax({
-        url: URLrequest + param,
+        url: URLrequest,
         method: method,
         dataType: "json"
     });
 
     request.done(function (data) {
-        dataHandler(data);
+        dataHandler(data[param]);
     });
 }
 
