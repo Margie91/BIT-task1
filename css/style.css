@@ -109,23 +109,30 @@ footer {
 .candidatePage h5 {
   font-size: 1.3rem; }
 
-table.table td {
-  vertical-align: middle; }
-table.table thead {
-  background-color: #1A281F;
-  color: white; }
-table.table .modalButton {
-  text-align: right; }
-  table.table .modalButton img {
-    padding-right: 10px;
-    border: none;
-    width: 3rem;
-    margin: 0;
-    transform: scale(0.95);
-    transition: all 0.3s ease-in-out; }
-    table.table .modalButton img:hover {
-      transform: scale(1.2);
-      cursor: pointer; }
+table.table {
+  font-size: 0.75rem; }
+  table.table td {
+    vertical-align: middle; }
+  table.table thead {
+    background-color: #1A281F;
+    color: white; }
+  table.table .modalButton {
+    text-align: right; }
+    table.table .modalButton img {
+      padding-right: 10px;
+      border: none;
+      width: 1.75rem;
+      margin: 0;
+      transform: scale(0.95);
+      transition: all 0.3s ease-in-out; }
+      table.table .modalButton img:hover {
+        transform: scale(1.2);
+        cursor: pointer; }
+  @media screen and (min-width: 480px) {
+    table.table {
+      font-size: 1rem; }
+      table.table .modalButton img {
+        width: 3rem; } }
 
 h3 {
   color: #242424;

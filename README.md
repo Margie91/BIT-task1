@@ -6,7 +6,7 @@ DEMO: [Interview Reports app](http://interview-reports.surge.sh)
 
 ## Built With
 
-HTML, Vanilla JS, SASS, jQuery, AJAX
+HTML, Vanilla JS(ES5, ES6), SASS, jQuery, AJAX, Bootstrap
 
 ## Author
 
