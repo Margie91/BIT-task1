@@ -1,4 +1,4 @@
-BIT Certification - Task 1
+Interview Reports app
  
 Web application for viewing interview candidates and reports
 
