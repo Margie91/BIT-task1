@@ -1,19 +1,19 @@
 "use strict";
 
-//var URLrequest = "http://localhost:3333/api/";
 
-var URLrequest = "js/db.json";
+var URLrequest = "https://reports-json-server.herokuapp.com/api/";
 
 var appState = [];
 
 function getData(param, dataHandler) {
-    fetch(URLrequest)
+    var url = URLrequest + param;
+    fetch(url)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            dataHandler(data[param]);
-            appState = data[param];
+            dataHandler(data);
+            appState = data;
         })
         .catch(function (error) {
             console.log(error);
@@ -94,6 +94,7 @@ function filterCandidates(event) {
     });
     printCandidates(filteredData);
 }
+
 
 (function () {
     getCandidates();

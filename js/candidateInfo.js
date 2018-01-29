@@ -2,20 +2,19 @@
 
 var candidateId = parseFloat(localStorage.getItem("id"));
 
-//var URLrequest = "http://localhost:3333/api/";
 
-var URLrequest = "js/db.json";
+var URLrequest = "https://reports-json-server.herokuapp.com/api/";
 
 //ajax request
 function getData(param, method, dataHandler) {
     var request = $.ajax({
-        url: URLrequest,
+        url: URLrequest + param,
         method: method,
         dataType: "json"
     });
 
     request.done(function (data) {
-        dataHandler(data[param]);
+        dataHandler(data);
     });
 }
 
